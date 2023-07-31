@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ChessGame : MonoBehaviour
 {
-    public GameObject board;
+    [SerializeField]
+    private GameObject board;
     // Start is called before the first frame update
     void Start()
     {

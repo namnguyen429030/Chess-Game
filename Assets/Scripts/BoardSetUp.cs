@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class BoardSetUp : MonoBehaviour
 {
-    public GameObject WhiteTile, BlackTile;
+    [SerializeField]
+    private GameObject WhiteTile, BlackTile;
     private const float TILE_HEIGHT = 0.5f;
     private const float TILE_WIDTH = 0.5f;
     // Start is called before the first frame update

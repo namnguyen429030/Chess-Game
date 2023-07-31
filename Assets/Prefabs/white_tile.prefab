@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8056533190555042233}
   - component: {fileID: 3699157014555400427}
-  - component: {fileID: 254044006978010309}
+  - component: {fileID: 4473240010159608313}
+  - component: {fileID: 3363645542376378968}
   m_Layer: 0
   m_Name: white_tile
   m_TagString: Untagged
@@ -85,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &254044006978010309
+--- !u!114 &4473240010159608313
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,3 +110,15 @@ MonoBehaviour:
   BlackRook: {fileID: 4594456824410662899, guid: 06306c6c223800a49a51250a8f2b5088, type: 3}
   WhitePawn: {fileID: 1058778694481137179, guid: 72f34d45f5d588e4ba843fd1d130f2dd, type: 3}
   BlackPawn: {fileID: 1862855324556986132, guid: 3bcd10446c2c2db4c9165f1465bb74c4, type: 3}
+--- !u!114 &3363645542376378968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970639463500856449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efdcd38ee89ab3e4d9c45e63d77e1d8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
