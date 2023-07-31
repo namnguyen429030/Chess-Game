@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8056533190555042233}
   - component: {fileID: 3699157014555400427}
+  - component: {fileID: 254044006978010309}
   m_Layer: 0
   m_Name: white_tile
   m_TagString: Untagged
@@ -84,3 +85,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &254044006978010309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970639463500856449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55be624226958047a0893aeedf2d1e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WhiteKing: {fileID: 6729571743045103311, guid: 0eb92fedbac286e4f8a4129f25a58814, type: 3}
+  BlackKing: {fileID: 2760245733234102518, guid: b4effe44c8a781b4f8e2705757fb47c1, type: 3}
+  WhiteQueen: {fileID: 1825257067855488103, guid: 39a490136b649704a8b733d056456fe9, type: 3}
+  BlackQueen: {fileID: 992552958467809113, guid: 67c2da61d568ab04d968f5c882e71ce4, type: 3}
+  WhiteKnight: {fileID: 7325013854192335521, guid: f41253fccf91a9444a18519943a762a0, type: 3}
+  BlackKnight: {fileID: 8009405230239672458, guid: 239d0cfc05a89f94b89c88d796e3f2a6, type: 3}
+  WhiteBishop: {fileID: 5908617899245189855, guid: aa0f4d5caffc6ee4f83b987daff0f274, type: 3}
+  BlackBishop: {fileID: 6885534305314025860, guid: 8a58efa32efa37e448ddc9961bd6a236, type: 3}
+  WhiteRook: {fileID: 9004578828229396150, guid: 649f64134ed585f4abd3fe444ae37e31, type: 3}
+  BlackRook: {fileID: 4594456824410662899, guid: 06306c6c223800a49a51250a8f2b5088, type: 3}
+  WhitePawn: {fileID: 1058778694481137179, guid: 72f34d45f5d588e4ba843fd1d130f2dd, type: 3}
+  BlackPawn: {fileID: 1862855324556986132, guid: 3bcd10446c2c2db4c9165f1465bb74c4, type: 3}

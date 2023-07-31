@@ -364,6 +364,7 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
 "Assets/Scripts/BoardSetUp.cs"
 "Assets/Scripts/ChessGame.cs"
+"Assets/Scripts/TileHavingPiece.cs"
 -langversion:9.0
 
 /deterministic
