@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3651715129491204075}
-  - component: {fileID: -295180141374675833}
+  - component: {fileID: -8147312601471650564}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-295180141374675833
+--- !u!114 &-8147312601471650564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e5bdf2b85926c94e8a467eda89dbe73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WhiteTile: {fileID: 1970639463500856449, guid: 9d86fcd6834d0074fb08d21c6ace3817, type: 3}
-  BlackTile: {fileID: 8882109548559328965, guid: 5a071f341b5fef841ac2cd588423d36f, type: 3}
+  WhiteTile: {fileID: 886101431964412600, guid: ec90349fe625ec2429f669b4d91233c0, type: 3}
+  BlackTile: {fileID: 322219039969815193, guid: 755a0b555a3021147a83270f8bc6540a, type: 3}
   WhiteKing: {fileID: 6729571743045103311, guid: 0eb92fedbac286e4f8a4129f25a58814, type: 3}
   BlackKing: {fileID: 2760245733234102518, guid: b4effe44c8a781b4f8e2705757fb47c1, type: 3}
   WhiteQueen: {fileID: 1825257067855488103, guid: 39a490136b649704a8b733d056456fe9, type: 3}

@@ -362,10 +362,9 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.SpatialTracking.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
-"Assets/Scripts/BoardSetUp.cs"
 "Assets/Scripts/ChessGame.cs"
 "Assets/Scripts/FindValidTile.cs"
-"Assets/Scripts/HavePiece.cs"
+"Assets/Scripts/SetUpBoard.cs"
 -langversion:9.0
 
 /deterministic
