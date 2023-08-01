@@ -57,8 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ChessGame.cs" />
-    <Compile Include="Assets\Scripts\FindValidTile.cs" />
+    <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Scripts\SetUpBoard.cs" />
+    <Compile Include="Assets\Scripts\TilesStorage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

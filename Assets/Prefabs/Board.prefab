@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WhiteTile: {fileID: 886101431964412600, guid: ec90349fe625ec2429f669b4d91233c0, type: 3}
   BlackTile: {fileID: 322219039969815193, guid: 755a0b555a3021147a83270f8bc6540a, type: 3}
-  WhiteKing: {fileID: 6729571743045103311, guid: 0eb92fedbac286e4f8a4129f25a58814, type: 3}
-  BlackKing: {fileID: 2760245733234102518, guid: b4effe44c8a781b4f8e2705757fb47c1, type: 3}
+  WhiteKing: {fileID: 4324159858741503386, guid: 0eb92fedbac286e4f8a4129f25a58814, type: 3}
+  BlackKing: {fileID: 4691566666174201284, guid: b4effe44c8a781b4f8e2705757fb47c1, type: 3}
   WhiteQueen: {fileID: 1825257067855488103, guid: 39a490136b649704a8b733d056456fe9, type: 3}
   BlackQueen: {fileID: 992552958467809113, guid: 67c2da61d568ab04d968f5c882e71ce4, type: 3}
   WhiteKnight: {fileID: 7325013854192335521, guid: f41253fccf91a9444a18519943a762a0, type: 3}
