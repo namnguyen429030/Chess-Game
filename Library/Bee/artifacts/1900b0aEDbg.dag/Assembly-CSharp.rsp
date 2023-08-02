@@ -362,10 +362,15 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.SpatialTracking.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
+"Assets/Scripts/Bishop.cs"
+"Assets/Scripts/Board.cs"
 "Assets/Scripts/ChessGame.cs"
-"Assets/Scripts/Move.cs"
-"Assets/Scripts/SetUpBoard.cs"
-"Assets/Scripts/TilesStorage.cs"
+"Assets/Scripts/ChessPiece.cs"
+"Assets/Scripts/King.cs"
+"Assets/Scripts/Knight.cs"
+"Assets/Scripts/Pawn.cs"
+"Assets/Scripts/Queen.cs"
+"Assets/Scripts/Rook.cs"
 -langversion:9.0
 
 /deterministic
