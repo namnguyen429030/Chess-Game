@@ -7,37 +7,53 @@ public class Bishop : ChessPiece
     internal override void FindValidMove()
     {
         base.FindValidMove();
-        //Right half
-        int moveIndex = 1;
-        for (float i = transform.position.x + 1; i < 0; i++)
+        //Quarter 1
+        float j = transform.position.y + 1;
+        for (float i = transform.position.x + 1; i < 0 && j < 4; i++)
         {
-            float upperHalf = transform.position.y + moveIndex;
-            float lowerHalf = transform.position.y - moveIndex;
-            if (upperHalf < 4)
+            Vector3 destionation = new Vector3(i, j, -1);
+            if (CheckBlocked(destionation))
             {
-                validMoves.Add(new Vector3(i, upperHalf, -1));
+                break;
             }
-            if (lowerHalf > -4)
-            {
-                validMoves.Add(new Vector3(i, lowerHalf, -1));
-            }
-            moveIndex++;
+            validMoves.Add(destionation);
+            j++;
         }
-        moveIndex = 1;
-        //Left half
-        for (float i = transform.position.x - 1; i > -8; i--)
+        //Quarter 2
+        j = transform.position.y - 1;
+        for (float i = transform.position.x + 1; i < 0 && j > -4; i++)
         {
-            float upperHalf = transform.position.y + moveIndex;
-            float lowerHalf = transform.position.y - moveIndex;
-            if (upperHalf < 4)
+            Vector3 destionation = new Vector3(i, j, -1);
+            if (CheckBlocked(destionation))
             {
-                validMoves.Add(new Vector3(i, upperHalf, -1));
+                break;
             }
-            if (lowerHalf > -4)
+            validMoves.Add(destionation);
+            j--;
+        }
+        //Quarter 3
+        j = transform.position.y + 1;
+        for (float i = transform.position.x - 1; i > -8 && j < 4; i--)
+        {
+            Vector3 destionation = new Vector3(i, j, -1);
+            if (CheckBlocked(destionation))
             {
-                validMoves.Add(new Vector3(i, lowerHalf, -1));
+                break;
             }
-            moveIndex++;
+            validMoves.Add(destionation);
+            j++;
+        }
+        //Quarter 4
+        j = transform.position.y - 1;
+        for (float i = transform.position.x - 1; i > -8 && j > -4; i--)
+        {
+            Vector3 destionation = new Vector3(i, j, -1);
+            if (CheckBlocked(destionation))
+            {
+                break;
+            }
+            validMoves.Add(destionation);
+            j--;
         }
     }
 }

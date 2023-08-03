@@ -8,16 +8,40 @@ public class King : ChessPiece
     {
         base.FindValidMove();
         //Right
-        validMoves.Add(new Vector3(transform.position.x + 1, transform.position.y, -1));
-        validMoves.Add(new Vector3(transform.position.x + 1, transform.position.y + 1, -1));
-        validMoves.Add(new Vector3(transform.position.x + 1, transform.position.y - 1, -1));
+        if (transform.position.x < 0)
+        {
+            validMoves.Add(new Vector3(transform.position.x + 1, transform.position.y, -1));
+            if(transform.position.y < 3)
+            { 
+                validMoves.Add(new Vector3(transform.position.x + 1, transform.position.y + 1, -1));
+            }
+            if(transform.position.y > -3)
+            {
+                validMoves.Add(new Vector3(transform.position.x + 1, transform.position.y - 1, -1));
+            }
+        }
         //Left
-        validMoves.Add(new Vector3(transform.position.x - 1, transform.position.y, -1));
-        validMoves.Add(new Vector3(transform.position.x - 1, transform.position.y + 1, -1));
-        validMoves.Add(new Vector3(transform.position.x - 1, transform.position.y - 1, -1));
+        if (transform.position.x > -7)
+        {
+            validMoves.Add(new Vector3(transform.position.x - 1, transform.position.y, -1));
+            if(transform.position.y < 3)
+            {
+                validMoves.Add(new Vector3(transform.position.x - 1, transform.position.y + 1, -1));
+            }
+            if(transform.position.y > -3)
+            {
+                validMoves.Add(new Vector3(transform.position.x - 1, transform.position.y - 1, -1));
+            }
+        }
         //Upper
-        validMoves.Add(new Vector3(transform.position.x, transform.position.y + 1, -1));
+        if (transform.position.y < 3)
+        {
+            validMoves.Add(new Vector3(transform.position.x, transform.position.y + 1, -1));
+        }
         //Lower
-        validMoves.Add(new Vector3(transform.position.x, transform.position.y - 1, -1));
+        if (transform.position.y > -3)
+        {
+            validMoves.Add(new Vector3(transform.position.x, transform.position.y - 1, -1));
+        }
     }
 }
