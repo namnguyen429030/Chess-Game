@@ -11,8 +11,13 @@ public class Rook : ChessPiece
         for(float i = transform.position.x + 1; i < 0; i++)
         {
             Vector3 destionation = new Vector3(i, transform.position.y, -1);
-            if (CheckBlocked(destionation))
+            if (CheckBlockedSameSide(destionation))
             {
+                break;
+            }
+            if (CheckBlockedDifferentSide(destionation))
+            {
+                validMoves.Add(destionation);
                 break;
             }
             validMoves.Add(destionation);
@@ -21,8 +26,13 @@ public class Rook : ChessPiece
         for (float i = transform.position.x - 1; i > -8; i--)
         {
             Vector3 destionation = new Vector3(i, transform.position.y, -1);
-            if (CheckBlocked(destionation))
+            if (CheckBlockedSameSide(destionation))
             {
+                break;
+            }
+            if (CheckBlockedDifferentSide(destionation))
+            {
+                validMoves.Add(destionation);
                 break;
             }
             validMoves.Add(destionation);
@@ -31,8 +41,13 @@ public class Rook : ChessPiece
         for (float i = transform.position.y + 1; i < 4 ; i++)
         {
             Vector3 destionation = new Vector3(transform.position.x, i, -1);
-            if (CheckBlocked(destionation))
+            if (CheckBlockedSameSide(destionation))
             {
+                break;
+            }
+            if (CheckBlockedDifferentSide(destionation))
+            {
+                validMoves.Add(destionation);
                 break;
             }
             validMoves.Add(destionation);
@@ -41,8 +56,13 @@ public class Rook : ChessPiece
         for (float i = transform.position.y - 1; i> -4 ; i--)
         {
             Vector3 destionation = new Vector3(transform.position.x, i, -1);
-            if (CheckBlocked(destionation))
+            if (CheckBlockedSameSide(destionation))
             {
+                break;
+            }
+            if (CheckBlockedDifferentSide(destionation))
+            {
+                validMoves.Add(destionation);
                 break;
             }
             validMoves.Add(destionation);

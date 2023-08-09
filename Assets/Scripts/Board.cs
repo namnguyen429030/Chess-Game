@@ -15,11 +15,6 @@ public class Board : MonoBehaviour
     {
         SetUp();
     }
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     private void SetUp()
     {
         for (char i = 'a'; i < 'i'; i++)
@@ -65,11 +60,11 @@ public class Board : MonoBehaviour
                 break;
             case "d1":
                 WhiteQueen = Instantiate(WhiteQueen, chessPosition, Quaternion.identity);
-                WhiteQueen.name = "white_queen" + tile.name;
+                WhiteQueen.name = "white_queen_" + tile.name;
                 break;
             case "e1":
                 WhiteKing = Instantiate(WhiteKing, chessPosition, Quaternion.identity);
-                WhiteKing.name = "white_king" + tile.name;
+                WhiteKing.name = "white_king_" + tile.name;
                 break;
             case "a2":
             case "b2":
@@ -80,30 +75,30 @@ public class Board : MonoBehaviour
             case "g2":
             case "h2":
                 WhitePawn = Instantiate(WhitePawn, chessPosition, Quaternion.identity);
-                WhitePawn.name = "white_pawn" + tile.name;
+                WhitePawn.name = "white_pawn_" + tile.name;
                 break;
             case "a8":
             case "h8":
                 BlackRook = Instantiate(BlackRook, chessPosition, Quaternion.identity);
-                BlackRook.name = "black_rook" + tile.name;
+                BlackRook.name = "black_rook_" + tile.name;
                 break;
             case "b8":
             case "g8":
                 BlackKnight = Instantiate(BlackKnight, chessPosition, Quaternion.identity);
-                BlackKnight.name = "black_knight" + tile.name;
+                BlackKnight.name = "black_knight_" + tile.name;
                 break;
             case "c8":
             case "f8":
                 BlackBishop = Instantiate(BlackBishop, chessPosition, Quaternion.identity);
-                BlackBishop.name = "black_bishop" + tile.name;
+                BlackBishop.name = "black_bishop_" + tile.name;
                 break;
             case "d8":
                 BlackQueen = Instantiate(BlackQueen, chessPosition, Quaternion.identity);
-                BlackQueen.name = "black_queen" + tile.name;
+                BlackQueen.name = "black_queen_" + tile.name;
                 break;
             case "e8":
                 BlackKing = Instantiate(BlackKing, chessPosition, Quaternion.identity);
-                BlackKing.name = "black_king" + tile.name;
+                BlackKing.name = "black_king_" + tile.name;
                 break;
             case "a7":
             case "b7":
@@ -114,7 +109,7 @@ public class Board : MonoBehaviour
             case "g7":
             case "h7":
                 BlackPawn = Instantiate(BlackPawn, chessPosition, Quaternion.identity);
-                BlackPawn.name = "black_pawn" + tile.name;
+                BlackPawn.name = "black_pawn_" + tile.name;
                 break;
             default: break;
         }

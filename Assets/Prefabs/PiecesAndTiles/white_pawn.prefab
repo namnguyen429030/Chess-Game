@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4911365185276386837}
   - component: {fileID: 2697505856745368200}
   - component: {fileID: 4623473679425990205}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: white_pawn
   m_TagString: Piece
   m_Icon: {fileID: 0}

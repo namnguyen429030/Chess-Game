@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3773992713559515024}
   - component: {fileID: -6755230981259821269}
   - component: {fileID: -595234540206435164}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: white_queen
   m_TagString: Piece
   m_Icon: {fileID: 0}

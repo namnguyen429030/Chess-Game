@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9134022969793585065}
   - component: {fileID: 4097504540257944160}
   - component: {fileID: -1200588848606890798}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: black_queen
   m_TagString: Piece
   m_Icon: {fileID: 0}

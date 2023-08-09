@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Queen : ChessPiece
+public class Queen : Rook
 {
     internal override void FindValidMove()
     {
@@ -12,8 +12,13 @@ public class Queen : ChessPiece
         for (float i = transform.position.x + 1; i < 0 && j < 4; i++)
         {
             Vector3 destionation = new Vector3(i, j, -1);
-            if (CheckBlocked(destionation))
+            if (CheckBlockedSameSide(destionation))
             {
+                break;
+            }
+            if (CheckBlockedDifferentSide(destionation))
+            {
+                validMoves.Add(destionation);
                 break;
             }
             validMoves.Add(destionation);
@@ -24,43 +29,60 @@ public class Queen : ChessPiece
         for (float i = transform.position.x + 1; i < 0 && j > -4; i++)
         {
             Vector3 destionation = new Vector3(i, j, -1);
-            if (CheckBlocked(destionation))
+            if (CheckBlockedSameSide(destionation))
             {
                 break;
             }
-            validMoves.Add(destionation);
-            j--;
+            if (CheckBlockedDifferentSide(destionation))
+            {
+                validMoves.Add(destionation);
+                break;
+            }
+            validMoves.Add(destionation); j--;
         }
         //Quarter 3
         j = transform.position.y + 1;
         for (float i = transform.position.x - 1; i > -8 && j < 4; i--)
         {
             Vector3 destionation = new Vector3(i, j, -1);
-            if (CheckBlocked(destionation))
+            if (CheckBlockedSameSide(destionation))
             {
                 break;
             }
-            validMoves.Add(destionation);
-            j++;
+            if (CheckBlockedDifferentSide(destionation))
+            {
+                validMoves.Add(destionation);
+                break;
+            }
+            validMoves.Add(destionation); j++;
         }
         //Quarter 4
         j = transform.position.y - 1;
         for (float i = transform.position.x - 1; i > -8 && j > -4; i--)
         {
             Vector3 destionation = new Vector3(i, j, -1);
-            if (CheckBlocked(destionation))
+            if (CheckBlockedSameSide(destionation))
             {
                 break;
             }
-            validMoves.Add(destionation);
-            j--;
+            if (CheckBlockedDifferentSide(destionation))
+            {
+                validMoves.Add(destionation);
+                break;
+            }
+            validMoves.Add(destionation); j--;
         }
         //Right side
         for (float i = transform.position.x + 1; i < 0; i++)
         {
             Vector3 destionation = new Vector3(i, transform.position.y, -1);
-            if (CheckBlocked(destionation))
+            if (CheckBlockedSameSide(destionation))
             {
+                break;
+            }
+            if (CheckBlockedDifferentSide(destionation))
+            {
+                validMoves.Add(destionation);
                 break;
             }
             validMoves.Add(destionation);
@@ -69,8 +91,13 @@ public class Queen : ChessPiece
         for (float i = transform.position.x - 1; i > -8; i--)
         {
             Vector3 destionation = new Vector3(i, transform.position.y, -1);
-            if (CheckBlocked(destionation))
+            if (CheckBlockedSameSide(destionation))
             {
+                break;
+            }
+            if (CheckBlockedDifferentSide(destionation))
+            {
+                validMoves.Add(destionation);
                 break;
             }
             validMoves.Add(destionation);
@@ -79,8 +106,13 @@ public class Queen : ChessPiece
         for (float i = transform.position.y + 1; i < 4; i++)
         {
             Vector3 destionation = new Vector3(transform.position.x, i, -1);
-            if (CheckBlocked(destionation))
+            if (CheckBlockedSameSide(destionation))
             {
+                break;
+            }
+            if (CheckBlockedDifferentSide(destionation))
+            {
+                validMoves.Add(destionation);
                 break;
             }
             validMoves.Add(destionation);
@@ -89,8 +121,13 @@ public class Queen : ChessPiece
         for (float i = transform.position.y - 1; i > -4; i--)
         {
             Vector3 destionation = new Vector3(transform.position.x, i, -1);
-            if (CheckBlocked(destionation))
+            if (CheckBlockedSameSide(destionation))
             {
+                break;
+            }
+            if (CheckBlockedDifferentSide(destionation))
+            {
+                validMoves.Add(destionation);
                 break;
             }
             validMoves.Add(destionation);
