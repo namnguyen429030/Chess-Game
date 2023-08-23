@@ -14,9 +14,16 @@ public class ChessPiece : MonoBehaviour
     internal List<Vector3> validMoves = new List<Vector3>();
     internal int moveIndex;
     internal Vector3 oldPosition;
+    public ChessGame ChessGame { get; private set; }
+    public string Side { get; private set; }
+    internal void Awake()
+    {
+        ChessGame = GameObject.FindGameObjectWithTag("MainGame").GetComponent<ChessGame>();
+        Side = name.Split('_')[0];
+        FindValidMove();
+    }
     private void OnMouseDown()
     {
-        FindValidMove();
         difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         timeMouseClick = Time.time;
         currentPos = transform.position;
@@ -24,7 +31,7 @@ public class ChessPiece : MonoBehaviour
     internal virtual void OnMouseUp()
     {
         Vector3 destination = AdjustPosition(transform.position);
-        if (!IsValidMove(destination)) 
+        if (!IsValidMove(destination))
         { 
             transform.position = currentPos;
         }
@@ -32,13 +39,7 @@ public class ChessPiece : MonoBehaviour
         {
             oldPosition = currentPos;
             transform.position = destination;
-            List<GameObject> pawnsObject = GameObject.FindGameObjectsWithTag("Piece").Where(p => p.name.Split("_")[1] == "pawn").ToList();
-            foreach(GameObject pawnObject in pawnsObject)
-            {
-                Pawn pawn = pawnObject.GetComponent<Pawn>();
-                pawn.CanEnpassantLeft = false;
-                pawn.CanEnpassantRight = false;
-            }
+            ChessGame.SwitchTurn(Side);
         }
     }
     private void OnMouseDrag()
@@ -61,12 +62,11 @@ public class ChessPiece : MonoBehaviour
     {
         Vector2 coordinate2d = new Vector2(coordinate.x, coordinate.y);
         Collider2D collider = Physics2D.OverlapPoint(coordinate2d);
-        string thisSide = name.Split("_")[0];
-        string side = "";
+        string side;
         if (collider != null && collider.CompareTag("Piece"))
         {
             side = collider.name.Split("_")[0];
-            return thisSide == side;
+            return Side == side;
         }
         return false;
     }
@@ -74,12 +74,11 @@ public class ChessPiece : MonoBehaviour
     {
         Vector2 coordinate2d = new Vector2(coordinate.x, coordinate.y);
         Collider2D collider = Physics2D.OverlapPoint(coordinate2d);
-        string thisSide = name.Split("_")[0];
-        string side = "";
-        if (collider.CompareTag("Piece"))
+        string side;
+        if (collider != null && collider.CompareTag("Piece"))
         {
             side = collider.name.Split("_")[0];
-            return thisSide != side;
+            return Side != side;
         }
         return false;
     }
@@ -102,5 +101,15 @@ public class ChessPiece : MonoBehaviour
             position.y = (int)position.y + (float)0.5;
         }
         return position;
+    }
+    internal void Captured(Vector3 destination)
+    {
+        Vector2 destination2d = new Vector2(destination.x, destination.y);
+        Collider2D target = Physics2D.OverlapPoint(destination2d);
+        Destroy(target.gameObject);
+    }
+    internal void OnDestroy()
+    {
+        
     }
 }

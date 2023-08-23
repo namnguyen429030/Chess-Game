@@ -8,10 +8,11 @@ public class Board : MonoBehaviour
 {
     [SerializeField]
     private GameObject WhiteTile, BlackTile, WhiteKing, BlackKing, WhiteQueen, BlackQueen, WhiteKnight, BlackKnight, WhiteBishop, BlackBishop, WhiteRook, BlackRook, WhitePawn, BlackPawn;
+    
     private const float TILE_HEIGHT = 0.5f;
     private const float TILE_WIDTH = 0.5f;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         SetUp();
     }

@@ -13,8 +13,7 @@ public class Pawn : ChessPiece
     internal override void FindValidMove()
     {
         base.FindValidMove();
-        string side = name.Split("_")[0];
-        switch(side)
+        switch(Side)
         {
             case "white":
                 if(transform.position.y == -2.5)
@@ -63,14 +62,11 @@ public class Pawn : ChessPiece
                     if (rightPiece != null && rightPiece.CompareTag("Piece"))
                     {
                         string[] rightPieceDef = rightPiece.name.Split("_");
-                        Debug.Log(rightPieceDef[1] + " " + rightPieceDef[0]);
                         if (rightPieceDef[1] == "pawn" && rightPieceDef[0] == "black")
                         {
                             Pawn pawn = rightPiece.GetComponent<Pawn>();
-                            Debug.Log("accepted");
                             if (pawn.CanEnpassantLeftAnyMore)
                             {
-                                Debug.Log("can enpassant");
                                 pawn.CanEnpassantLeft = true;
                                 pawn.CanEnpassantLeftAnyMore = false;
                             }
@@ -79,14 +75,11 @@ public class Pawn : ChessPiece
                     if (leftPiece != null && leftPiece.CompareTag("Piece"))
                     {
                         string[] leftPieceDef = leftPiece.name.Split("_");
-                        Debug.Log(leftPieceDef[1] + " "+ leftPieceDef[0]);
                         if (leftPieceDef[1] == "pawn" && leftPieceDef[0] == "black")
                         {
                             Pawn pawn = leftPiece.GetComponent<Pawn>();
-                            Debug.Log("accepted");
                             if (pawn.CanEnpassantRightAnyMore)
                             {
-                                Debug.Log("can enpassant");
                                 pawn.CanEnpassantRight = true;
                                 pawn.CanEnpassantRightAnyMore = false;
                             }
@@ -103,14 +96,12 @@ public class Pawn : ChessPiece
                     if (rightPiece != null && rightPiece.CompareTag("Piece"))
                     {
                         string[] rightPieceDef = rightPiece.name.Split("_");
-                        Debug.Log(rightPieceDef[1] + " " + rightPieceDef[0]);
                         if (rightPieceDef[1] == "pawn" && rightPieceDef[0] == "white")
                         {
                             Pawn pawn = rightPiece.GetComponent<Pawn>();
                             Debug.Log("accepted");
                             if (pawn.CanEnpassantLeftAnyMore)
                             {
-                                Debug.Log("can enpassant");
                                 pawn.CanEnpassantLeft = true;
                                 pawn.CanEnpassantLeftAnyMore = false;
                             }
@@ -126,7 +117,6 @@ public class Pawn : ChessPiece
                             Debug.Log("accepted");
                             if (pawn.CanEnpassantRightAnyMore)
                             {
-                                Debug.Log("can enpassant");
                                 pawn.CanEnpassantRight = true;
                                 pawn.CanEnpassantRightAnyMore = false;
                             }
@@ -136,4 +126,5 @@ public class Pawn : ChessPiece
                 break;
         }
     }
+    
 }
